@@ -1,0 +1,118 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+
+/* Optional: Makes the sample page fill the window. */
+
+html,
+body,
+#map_canvas {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto', 'sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+#floating-panel {
+    background-color: #fff;
+    border: 1px solid #999;
+    left: 25%;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    z-index: 5;
+}
+
+
+/* ------------------------------------------------- */
+
+.animation {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    z-index: 999;
+    display: none;
+}
+
+.dot {
+    position: absolute;
+    background: #FF0000;
+    height: 0;
+    width: 0;
+    border-radius: 5000px;
+    box-shadow: 0 0 2px 2px #FF0000;
+    transform: translate(-50%, -50%);
+    animation: pulseInner 2s infinite ease-out;
+}
+
+@-webkit-keyframes {
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8
+    }
+    95% {
+        height: 75px;
+        width: 75px;
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes {
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8
+    }
+    95% {
+        height: 75px;
+        width: 75px;
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes pulseInner {
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8
+    }
+    95% {
+        height: 75px;
+        width: 75px;
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+    }
+}
